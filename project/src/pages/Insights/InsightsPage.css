@@ -1,0 +1,152 @@
+.insights-page { padding-bottom: var(--space-xl); }
+.insights-header { padding-top: var(--space-lg); }
+.insights-title { font-size: 26px; }
+.insights-sub { color: var(--text-secondary); font-size: 14px; margin-top: 4px; }
+
+.insights-tabs {
+  display: flex;
+  background: var(--primary-100);
+  border-radius: var(--radius-full);
+  padding: 4px;
+  gap: 2px;
+}
+
+.insights-tab {
+  flex: 1;
+  padding: 10px 8px;
+  border-radius: var(--radius-full);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: all var(--transition-base);
+}
+
+.insights-tab.active {
+  background: white;
+  color: var(--primary-dark);
+  box-shadow: var(--shadow-sm);
+}
+
+.insights-content { }
+
+.section-title { font-size: 17px; font-family: var(--font-heading); margin-bottom: var(--space-sm); }
+
+/* Calorie summary */
+.calorie-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: var(--space-md) 0;
+}
+
+.cal-stat { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.cal-stat-num { font-size: 26px; font-weight: 800; font-family: var(--font-mono); }
+.cal-stat-label { font-size: 12px; color: var(--text-secondary); font-weight: 500; }
+.cal-divider { width: 1px; height: 40px; background: var(--border-light); }
+
+/* Macro cards */
+.macro-cards { display: flex; flex-direction: column; gap: var(--space-sm); }
+
+.macro-detail-card { }
+.macro-detail-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; }
+.macro-detail-name { font-size: 14px; font-weight: 700; }
+.macro-detail-pct { font-size: 14px; font-weight: 800; font-family: var(--font-mono); }
+.macro-detail-nums { display: flex; align-items: baseline; gap: 4px; }
+.macro-detail-val { font-size: 22px; font-weight: 800; font-family: var(--font-mono); }
+.macro-detail-target { font-size: 13px; color: var(--text-muted); }
+
+/* Meal breakdown */
+.meal-breakdown-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.meal-breakdown-row:last-child { border-bottom: none; }
+.meal-breakdown-type { font-size: 13px; font-weight: 600; width: 72px; flex-shrink: 0; }
+
+.meal-breakdown-bar-wrap {
+  flex: 1;
+  height: 8px;
+  background: var(--primary-100);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.meal-breakdown-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--primary-light));
+  border-radius: var(--radius-full);
+  transition: width 1s ease;
+}
+
+.meal-breakdown-cal { font-size: 12px; font-weight: 700; font-family: var(--font-mono); color: var(--text-secondary); width: 64px; text-align: right; flex-shrink: 0; }
+
+/* Weekly */
+.weekly-stats-row { display: flex; justify-content: space-around; }
+.weekly-stat { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.weekly-stat-num { font-size: 24px; font-weight: 800; font-family: var(--font-mono); }
+.weekly-stat-label { font-size: 12px; color: var(--text-secondary); }
+
+.chart-legend {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: var(--space-sm);
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Achievements */
+.achievements-summary {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.ach-summary-emoji { font-size: 40px; }
+.ach-summary-title { font-size: 16px; font-weight: 700; }
+.ach-summary-sub { font-size: 13px; color: var(--text-secondary); margin-top: 2px; }
+
+.achievements-grid { display: flex; flex-direction: column; gap: var(--space-sm); }
+
+.achievement-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  opacity: 0.7;
+  transition: all var(--transition-base);
+}
+
+.achievement-card.earned { opacity: 1; }
+
+.ach-emoji { font-size: 32px; flex-shrink: 0; }
+.ach-info { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+.ach-title { font-size: 14px; font-weight: 700; }
+.ach-desc { font-size: 12px; color: var(--text-secondary); }
+
+.ach-progress { margin-top: 6px; display: flex; flex-direction: column; gap: 3px; }
+.ach-progress-label { font-size: 11px; color: var(--text-muted); font-family: var(--font-mono); }
+
+.ach-check {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  flex-shrink: 0;
+}

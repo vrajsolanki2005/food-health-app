@@ -6,16 +6,15 @@ interface NavItem {
   id: AppPage;
   label: string;
   icon: string;
-  activeIcon: string;
   isFab?: boolean;
 }
 
 const NAV_ITEMS: NavItem[] = [
-  { id: 'home',     label: 'Home',    icon: '🏠',  activeIcon: '🏡' },
-  { id: 'insights', label: 'Insights',icon: '📊',  activeIcon: '📈' },
-  { id: 'scan',     label: 'Scan',    icon: '📸',  activeIcon: '📸', isFab: true },
-  { id: 'recipes',  label: 'Recipes', icon: '🍳',  activeIcon: '🍽️' },
-  { id: 'profile',  label: 'Profile', icon: '👤',  activeIcon: '👤' },
+  { id: 'home',      label: 'Home',      icon: '🏠' },
+  { id: 'insights',  label: 'Insights',  icon: '📊' },
+  { id: 'scan',      label: 'Scan',      icon: '📸', isFab: true },
+  { id: 'recipes',   label: 'Recipes',   icon: '🍳' },
+  { id: 'community', label: 'Community', icon: '👥' },
 ];
 
 export function BottomNav() {
@@ -24,7 +23,7 @@ export function BottomNav() {
   return (
     <nav className="bottom-nav" role="navigation" aria-label="Main navigation">
       <div className="bottom-nav-inner">
-        {NAV_ITEMS.map((item) => (
+        {NAV_ITEMS.map(item => (
           <button
             key={item.id}
             className={`nav-item${item.isFab ? ' nav-item--fab' : ''}${page === item.id ? ' nav-item--active' : ''}`}
@@ -39,9 +38,7 @@ export function BottomNav() {
               </span>
             ) : (
               <>
-                <span className="nav-icon" aria-hidden="true">
-                  {page === item.id ? item.activeIcon : item.icon}
-                </span>
+                <span className="nav-icon" aria-hidden="true">{item.icon}</span>
                 <span className="nav-label">{item.label}</span>
                 {page === item.id && <span className="nav-dot" aria-hidden="true" />}
               </>

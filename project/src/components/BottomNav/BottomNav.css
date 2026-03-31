@@ -1,6 +1,3 @@
-/* ============================================================
-   BOTTOM NAVIGATION
-   ============================================================ */
 .bottom-nav {
   position: fixed;
   bottom: 0;
@@ -8,60 +5,52 @@
   transform: translateX(-50%);
   width: 100%;
   max-width: 480px;
+  height: var(--bottom-nav-height);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid var(--border-light);
   z-index: var(--z-nav);
-  padding: 0 0 env(safe-area-inset-bottom, 0);
+  box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.06);
 }
 
 .bottom-nav-inner {
   display: flex;
-  align-items: flex-end;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-top: 1px solid var(--border-light);
-  box-shadow: 0 -4px 24px rgba(0,0,0,0.08);
-  height: var(--bottom-nav-height);
-  padding: 0 8px;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  padding: 0 var(--space-xs);
 }
 
 .nav-item {
-  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 8px 4px 12px;
   gap: 3px;
-  cursor: pointer;
-  border: none;
-  background: none;
-  tap-highlight-color: transparent;
-  -webkit-tap-highlight-color: transparent;
+  flex: 1;
+  height: 100%;
   position: relative;
-  transition: all var(--transition-fast);
+  transition: all var(--transition-base);
+  padding-bottom: env(safe-area-inset-bottom, 0);
 }
 
 .nav-icon {
   font-size: 22px;
   transition: transform var(--transition-spring);
   display: block;
-  line-height: 1;
 }
 
 .nav-item--active .nav-icon {
-  transform: scale(1.1);
-}
-
-.nav-item--active .nav-icon {
-  filter: drop-shadow(0 2px 6px rgba(76, 175, 80, 0.4));
+  transform: scale(1.15);
 }
 
 .nav-label {
   font-size: 10px;
   font-weight: 600;
   color: var(--text-muted);
-  transition: color var(--transition-fast);
-  letter-spacing: 0.3px;
+  transition: color var(--transition-base);
+  letter-spacing: 0.2px;
 }
 
 .nav-item--active .nav-label {
@@ -70,20 +59,17 @@
 
 .nav-dot {
   position: absolute;
-  bottom: 6px;
+  bottom: 8px;
   width: 4px;
   height: 4px;
   border-radius: 50%;
   background: var(--primary);
-  animation: scaleIn 0.3s ease;
+  animation: scaleIn 0.2s ease both;
 }
 
-/* FAB (Scan button) */
+/* FAB (Scan) button */
 .nav-item--fab {
-  flex: 1.2;
-  padding-bottom: 0;
-  align-items: center;
-  justify-content: flex-start;
+  flex: 0 0 64px;
 }
 
 .nav-fab-btn {
@@ -96,17 +82,16 @@
   justify-content: center;
   box-shadow: var(--shadow-green);
   transition: all var(--transition-spring);
-  transform: translateY(-10px);
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 
 .nav-item--fab:hover .nav-fab-btn,
 .nav-item--fab:active .nav-fab-btn {
-  transform: translateY(-14px) scale(1.05);
-  box-shadow: 0 12px 32px rgba(76, 175, 80, 0.5);
+  transform: scale(1.08);
+  box-shadow: 0 12px 32px rgba(76, 175, 80, 0.45);
 }
 
 .nav-fab-icon {
   font-size: 24px;
-  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2));
+  display: block;
 }

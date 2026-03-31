@@ -1,0 +1,113 @@
+.profile-page { padding-bottom: var(--space-2xl); }
+
+.profile-hero {
+  background: linear-gradient(160deg, var(--primary-100) 0%, var(--bg-base) 100%);
+  padding: var(--space-2xl) var(--space-md) var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.profile-avatar-wrap { position: relative; }
+
+.profile-avatar {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  border: 4px solid white;
+  box-shadow: var(--shadow-green);
+}
+
+.profile-level-badge {
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+  background: var(--accent-yellow);
+  color: #5D4037;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 3px 7px;
+  border-radius: var(--radius-full);
+  border: 2px solid white;
+}
+
+.profile-name { font-size: 22px; font-weight: 800; margin-top: var(--space-sm); }
+.profile-email { font-size: 14px; color: var(--text-secondary); }
+
+.profile-goal-chip {
+  background: white;
+  border: 1.5px solid var(--primary-200);
+  border-radius: var(--radius-full);
+  padding: 6px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary-dark);
+  margin-top: 4px;
+}
+
+.section-title { font-size: 17px; font-family: var(--font-heading); margin-bottom: var(--space-sm); }
+
+/* Stats */
+.profile-stats { display: flex; align-items: center; justify-content: space-around; }
+.profile-stat { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.profile-stat-val { font-size: 24px; font-weight: 800; font-family: var(--font-mono); }
+.profile-stat-label { font-size: 12px; color: var(--text-secondary); }
+.profile-stat-divider { width: 1px; height: 40px; background: var(--border-light); }
+
+/* Health info */
+.health-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.health-info-item { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.health-info-val { font-size: 18px; font-weight: 800; font-family: var(--font-mono); color: var(--primary-dark); }
+.health-info-label { font-size: 11px; color: var(--text-secondary); font-weight: 600; }
+
+/* Targets */
+.target-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.target-row:last-child { border-bottom: none; }
+.target-label { font-size: 14px; font-weight: 600; }
+.target-val { font-size: 15px; font-weight: 800; font-family: var(--font-mono); }
+
+/* Badges */
+.badges-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-sm);
+}
+
+.badge-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.badge-item-emoji { font-size: 24px; }
+.badge-item-title { font-size: 13px; font-weight: 700; }
+
+/* Preferences */
+.pref-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.pref-row:last-child { border-bottom: none; }
+.pref-icon { font-size: 20px; flex-shrink: 0; }
+.pref-info { display: flex; flex-direction: column; gap: 2px; }
+.pref-label { font-size: 13px; font-weight: 600; color: var(--text-secondary); }
+.pref-val { font-size: 14px; font-weight: 500; text-transform: capitalize; }
+
+/* Actions */
+.profile-actions { display: flex; flex-direction: column; gap: var(--space-sm); }
+.profile-logout { color: var(--secondary) !important; background: var(--secondary-100) !important; }
